@@ -1,25 +1,25 @@
 :root {
-    --primary: #4A90E2;
-    --secondary: #F5A623;
-    --accent: #50E3C2;
-    --text: #333;
-    --bg: #F8F8F8;
+    --sand: #f4e0c9;
+    --ocean: #4a90e2;
+    --sunset: #ff7e5f;
+    --text: #333333;
+    --white: #ffffff;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--text);
-    background-color: var(--bg);
+    background-color: var(--sand);
 }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* Header */
 header {
-    background-color: white;
+    background-color: var(--white);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -49,110 +49,74 @@ nav a {
     transition: color 0.3s;
 }
 
-nav a:hover, nav a.active { color: var(--primary); }
+nav a:hover, nav a.active { color: var(--ocean); }
 
-/* Hero section */
-.hero {
-    background: url('../images/hero-bg.jpg') center/cover no-repeat;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 2rem;
-}
+/* Main content */
+main { padding-top: 80px; }
 
-.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-.hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+section { padding: 4rem 2rem; }
+
+h1, h2 { color: var(--ocean); margin-bottom: 1rem; }
 
 .cta-button {
-    background-color: var(--secondary);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover { background-color: var(--primary); }
-
-/* Sections */
-section { padding: 4rem 2rem; }
-section h2 { text-align: center; margin-bottom: 2rem; color: var(--primary); }
-
-/* Services */
-.service-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.service-card {
-    background-color: var(--bg);
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 1rem;
-    text-align: center;
-    flex-basis: calc(33.333% - 2rem);
-    transition: transform 0.3s;
-}
-
-.service-card:hover { transform: translateY(-5px); }
-
-.service-card i {
-    font-size: 3rem;
-    color: var(--secondary);
-    margin-bottom: 1rem;
-}
-
-.btn {
     display: inline-block;
-    background-color: var(--primary);
-    color: white;
+    background-color: var(--sunset);
+    color: var(--white);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     text-decoration: none;
-    margin-top: 2rem;
     transition: background-color 0.3s;
 }
 
-.btn:hover { background-color: var(--secondary); }
+.cta-button:hover { background-color: var(--ocean); }
 
-/* About preview */
-.about-preview {
-    background-color: var(--accent);
-    color: white;
-    text-align: center;
-}
+/* Home page */
+.intro { text-align: center; }
 
-.about-preview p { max-width: 800px; margin: 0 auto 2rem; }
-
-/* Testimonials */
 .testimonial {
-    max-width: 800px;
-    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
 }
 
-.testimonial p { font-style: italic; margin-bottom: 1rem; }
+blockquote { font-style: italic; margin-bottom: 1rem; }
+
+/* About page */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-content img {
+    max-width: 40%;
+    border-radius: 10px;
+}
+
+/* Services page */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+/* Contact page */
+.contact-info p { margin-bottom: 1rem; }
+
+.contact-info i { color: var(--ocean); margin-right: 0.5rem; }
 
 /* Footer */
 footer {
-    background-color: var(--primary);
-    color: white;
-    padding: 2rem;
+    background-color: var(--ocean);
+    color: var(--white);
     text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
 }
-
-.social-links { margin-bottom: 1rem; }
-
-.social-links a {
-    color: white;
-    font-size: 1.5rem;
-    margin: 0 0.5rem;
-    transition: color 0.3s;
-}
-
-.social-links a:hover { color: var(--secondary); }
